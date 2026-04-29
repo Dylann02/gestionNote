@@ -40,6 +40,7 @@ CREATE TABLE parcours (
 CREATE TABLE liens_matieres_parcours (
 	matiere_id INT UNSIGNED NOT NULL,
 	parcours_id INT UNSIGNED NOT NULL,
+    groupe_optionnel INT,
 	PRIMARY KEY (matiere_id, parcours_id),
 	CONSTRAINT fk_lien_matiere
 		FOREIGN KEY (matiere_id) REFERENCES matieres(id)
